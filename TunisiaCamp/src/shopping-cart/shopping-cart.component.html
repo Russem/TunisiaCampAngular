@@ -1,0 +1,23 @@
+
+<!-- shopping-cart.component.html -->
+
+<div class="cart-icon" #cartIcon (click)="togglePopup()">
+  <i class="fa fa-shopping-cart"></i>
+  <span class="cart-notification" *ngIf="getCartItemCount() > 0">{{ getCartItemCount() }}</span>
+</div>
+
+<div class="cart-popup" [class.open]="isPopupOpen" #cartPopup>
+  <h2>Shopping Cart</h2>
+  <ul>
+    <li *ngFor="let item of cartItems">
+      {{ item.name }} - ${{ item.price }} x {{ item.quantity }}
+      <button (click)="removeFromCart(item)">Remove</button>
+    </li>
+  </ul>
+  <p class="cart-total">Total: ${{ getTotalPrice() }}</p>
+</div>
+
+
+
+
+

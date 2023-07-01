@@ -1,0 +1,19 @@
+<div class="viewport">
+  <div class="title">
+    <h1> Shopping Section</h1>
+  </div>
+<!-- ... other code ... -->
+<div class="cards">
+  <div class="card" *ngFor="let product of products">
+    <div class="card_img" [ngStyle]="{ 'background-image': 'url(' + product.imageUrl + ')' }">
+      <!-- Add to Cart Button -->
+      <div class="add-to-cart" (click)="addToCart(product)">
+        <i class="fas fa-cart-plus"></i>
+      </div>
+    </div>
+    <h3>{{ product.name }}</h3>
+    <div class="line"></div>
+    <p>{{ product.description }}</p>
+  </div>
+</div>
+</div>

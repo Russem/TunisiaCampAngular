@@ -1,0 +1,91 @@
+/* shopping-cart.component.css */
+
+.cart-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.cart-icon i {
+  font-size: 24px;
+}
+
+.cart-notification {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 50%;
+}
+
+.cart-popup {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 999;
+}
+
+.cart-popup.open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cart-popup ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-popup li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-popup li:last-child {
+  margin-bottom: 0;
+}
+
+.cart-popup button {
+  border: none;
+  background: none;
+  color: red;
+  cursor: pointer;
+}
+
+.checkout-button {
+  background-color: #8e11f3;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+  background-color: #4c20d4;
+}

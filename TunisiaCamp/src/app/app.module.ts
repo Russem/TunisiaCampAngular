@@ -8,13 +8,15 @@ import { NavBarComponent } from 'src/nav-bar/nav-bar.component';
 import { ShoppingCartComponent } from 'src/shopping-cart/shopping-cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductCardComponent } from 'src/product-card/product-card.component';
+import { FooterComponent } from 'src/footer/footer.component';
 
 @NgModule({
-  declarations: [					
+  declarations: [						
     AppComponent,
       NavBarComponent,
       ShoppingCartComponent,
-      ProductCardComponent
+      ProductCardComponent,
+      FooterComponent
    ],
   imports: [
     BrowserModule,
